@@ -29,6 +29,8 @@ jobs:
       DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
       MAVEN_USERNAME: ${{ vars.MAVEN_USERNAME }}
       MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+    permissions:
+      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6
